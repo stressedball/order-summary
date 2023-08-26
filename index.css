@@ -1,0 +1,140 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --paler-blue: hsl(225, 100%, 98%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+@font-face {
+    font-family: "Red Hat Display";
+    src: url("fonts/RedHatDisplay-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Red Hat Display Bold";
+    src: url("fonts/RedHatDisplay-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Red Hat Display Black";
+    src: url("fonts/RedHatDisplay-Black.ttf");
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    /* I don't like to do this but hey, */
+    /* it's easier for these exercises */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 400px;
+    border: 1px solid;
+    border-radius: 1rem;
+    /* margin: auto auto; */
+    padding: 0 2rem 2rem 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.card>p:nth-of-type(1) {
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 32px;
+    margin-bottom: 18px;
+}
+
+.card>p:nth-of-type(2) {
+    color: var(--desaturated-blue);
+    font-weight: 500;
+}
+
+img[alt="music"] {
+    width: inherit;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    box-sizing: border-box;
+}
+
+img[alt="icon-music"] {
+    margin-right: 24px;
+}
+
+.options {
+    background-color: var(--paler-blue);
+    padding: 18px 24px;
+    border-radius: 12px;
+    margin: 18px auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.options,
+.options div {
+    display: flex;
+    align-items: center;
+}
+
+.options {
+    justify-content: space-between;
+}
+
+.options div {
+    display: flex;
+    align-items: center;
+}
+
+.options div div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.options div div p:nth-of-type(2) {
+    color: var(--desaturated-blue);
+}
+
+.options div p:nth-of-type(1) {
+    font-weight: 700;
+    display: block;
+}
+
+
+a {
+    justify-self: flex-end;
+}
+
+button {
+    font-family: inherit;
+    background-color: var(--bright-blue);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 0;
+    border-radius: 12px;
+    border: none;
+    margin: 12px auto;
+    color: var(--pale-blue);
+    font-weight: 700;
+    box-shadow: -1px 2px 10px 0 var(--desaturated-blue);
+}
+
+
+button+p {
+    margin-top: 12px;
+    color: var(--desaturated-blue);
+    font-weight: 700;
+}
+
+p {
+    margin: 0;
+}
